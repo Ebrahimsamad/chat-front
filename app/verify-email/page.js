@@ -39,7 +39,7 @@ const VerifyEmailContent = () => {
         localStorage.setItem("token", result.token);
         localStorage.setItem("user", JSON.stringify(result.user));
 
-        router.push("/dashboard");
+        router.push("/chat");
       } catch (error) {
         console.error("Error:", error);
         toast.error(error.message || "Verification failed. Please try again.");
