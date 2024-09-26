@@ -270,6 +270,12 @@ const SignupPage = () => {
             </button>
           </div>
         </form>
+        <p className="mt-4 text-center">
+          already have an account?
+          <a href="/login" className="text-blue-500 hover:underline">
+            login
+          </a>
+        </p>
       </div>
     </div>
   );
