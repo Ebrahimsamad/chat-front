@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { io } from "socket.io-client";
 import { FaSignOutAlt } from "react-icons/fa"; // Import the logout icon
 
-const socket = io("http://localhost:3000/");
+const socket = io("https://chat-samad.vercel.app/");
 
 const Chat = () => {
   const router = useRouter();
