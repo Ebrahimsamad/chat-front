@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -272,9 +273,9 @@ const SignupPage = () => {
         </form>
         <p className="mt-4 text-center">
           already have an account?
-          <a href="/login" className="text-blue-500 hover:underline">
+          <Link href="/login" className="text-blue-500 hover:underline">
             login
-          </a>
+          </Link>
         </p>
       </div>
     </div>

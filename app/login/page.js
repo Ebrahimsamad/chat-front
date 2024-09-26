@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -146,10 +147,10 @@ const LoginPage = () => {
         </form>
         <p className="mt-4 text-center">
           Don't have an account?
-          <a href="/register" className="text-blue-500 hover:underline">
+          <Link href="/register" className="text-blue-500 hover:underline">
             {" "}
             Register now
-          </a>
+          </Link>
         </p>
 
         {backendMessage && (
