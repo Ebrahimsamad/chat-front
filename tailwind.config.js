@@ -8,8 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        spotify: {
+          green: "#1DB954",
+          dark: "#191414",
+        },
+        netflix: {
+          red: "#E50914",
+          dark: "#141414",
+        },
       },
     },
   },
