@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 
-const VerifyPage = () => {
+const VerifyEmailContent = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("Verifying your email...");
@@ -70,5 +70,11 @@ const VerifyPage = () => {
     </div>
   );
 };
+
+const VerifyPage = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <VerifyEmailContent />
+  </Suspense>
+);
 
 export default VerifyPage;
