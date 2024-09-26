@@ -36,14 +36,14 @@ const SignupPage = () => {
     const file = e.target.files[0];
     if (file) {
       setIDImage(file);
-      setValue("IDImage", file); // Set value in react-hook-form
-      clearErrors("IDImage"); // Clear any previous errors
+      setValue("IDImage", file);
+      clearErrors("IDImage");
     }
   };
 
   const clearIDImage = () => {
     setIDImage(null);
-    setValue("IDImage", null); // Clear the image in react-hook-form
+    setValue("IDImage", null);
   };
 
   const onSubmit = async (data) => {
@@ -92,7 +92,6 @@ const SignupPage = () => {
           encType="multipart/form-data"
           className="grid grid-cols-1 gap-4 sm:grid-cols-2"
         >
-          {/* Full Name Input */}
           <div className="relative col-span-2 sm:col-span-1">
             <input
               type="text"
@@ -111,7 +110,6 @@ const SignupPage = () => {
             ) : null}
           </div>
 
-          {/* Phone Input */}
           <div className="relative col-span-2 sm:col-span-1">
             <input
               type="tel"
@@ -130,7 +128,6 @@ const SignupPage = () => {
             ) : null}
           </div>
 
-          {/* Email Input */}
           <div className="relative col-span-2">
             <input
               type="email"
@@ -155,7 +152,6 @@ const SignupPage = () => {
             ) : null}
           </div>
 
-          {/* Password Input */}
           <div className="relative col-span-2">
             <input
               type={showPassword ? "text" : "password"}
@@ -192,7 +188,6 @@ const SignupPage = () => {
             ) : null}
           </div>
 
-          {/* Confirm Password Input */}
           <div className="relative col-span-2">
             <input
               type={showConfirmPassword ? "text" : "password"}
@@ -221,7 +216,6 @@ const SignupPage = () => {
             ) : null}
           </div>
 
-          {/* ID Image Upload */}
           <div className="relative col-span-2">
             <label className="flex items-center cursor-pointer">
               <FaUpload className="mr-2" />
@@ -256,7 +250,6 @@ const SignupPage = () => {
             )}
           </div>
 
-          {/* Submit Button */}
           <div className="col-span-2">
             <button
               type="submit"

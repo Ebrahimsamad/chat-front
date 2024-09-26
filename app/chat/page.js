@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { io } from "socket.io-client";
-import { FaSignOutAlt } from "react-icons/fa"; // Import the logout icon
+import { FaSignOutAlt } from "react-icons/fa";
 
-const socket = io("https://chat-samad.vercel.app/");
+const socket = io("https://chat-backend-ebrahim.up.railway.app/");
 
 const Chat = () => {
   const router = useRouter();
@@ -47,9 +47,9 @@ const Chat = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // Clear user data from local storage
-    localStorage.removeItem("token"); // Clear user data from local storage
-    router.push("/login"); // Redirect to the login page
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    router.push("/login");
   };
 
   return (
@@ -65,22 +65,20 @@ const Chat = () => {
         </div>
         <div className="chat-list">
           <div className="flex items-center mb-4 p-2 rounded-lg hover:bg-gray-200 cursor-pointer">
-            <img
+            {/* <img
               src={user?.IDImage || "/default-avatar.png"}
               alt="Avatar"
               className="w-12 h-12 rounded-full mr-3"
-            />
+            /> */}
             <div className="flex flex-col">
               <span className="font-semibold">
                 {user?.fullName || "Unknown User"}
               </span>
               {/* <span className="text-sm text-gray-500">{lastMessage}</span> */}
             </div>
-            <span className="ml-auto text-sm text-gray-500">08:00 AM</span>
           </div>
         </div>
 
-        {/* Logout Button */}
         <button
           onClick={handleLogout}
           className="flex items-center mt-4 p-2 hover:bg-gray-200 rounded-lg w-full"
@@ -106,11 +104,11 @@ const Chat = () => {
               }`}
             >
               <div className="flex items-center mb-2">
-                <img
+                {/* <img
                   src={msg.message.avatar || "/default-avatar.png"}
                   alt="User Avatar"
                   className="w-8 h-8 rounded-full mr-2"
-                />
+                /> */}
                 <h1 className="font-bold text-sm">
                   {msg.message.username || "Unknown User"}
                 </h1>

@@ -43,9 +43,8 @@ const LoginPage = () => {
         throw new Error(result.message || "Failed to login");
       }
 
-      // Store user and token in local storage
-      localStorage.setItem("user", JSON.stringify(result.user)); // Adjust based on your API response structure
-      localStorage.setItem("token", result.token); // Adjust based on your API response structure
+      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("token", result.token);
 
       toast.success(result.message || "Login successful!");
       setBackendMessage("");
