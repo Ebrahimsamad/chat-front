@@ -47,7 +47,6 @@ const LoginPage = () => {
       localStorage.setItem("user", JSON.stringify(result.user)); // Adjust based on your API response structure
       localStorage.setItem("token", result.token); // Adjust based on your API response structure
 
-      console.log("Success:", result);
       toast.success(result.message || "Login successful!");
       setBackendMessage("");
       router.push("/chat");
